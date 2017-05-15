@@ -2,60 +2,21 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-		
-		<title>e云竹</title>
-		
-		
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>		
+		<title>e云竹</title>		
 	</head>
-	<body>
-		
-		<?php
-			session_start (); 
-			if (isset ( $_SESSION ["code"] )) {//判断code存不存在，如果不存在，说明异常登录 
-			  ?> 
-			欢迎登录<?php
-			  echo "${_SESSION["username"]}";//显示登录用户名 
-			  ?><br> 
-			您的ip：<?php
-			  echo "${_SERVER['REMOTE_ADDR']}";//显示ip 
-			  ?> 
-			<br> 
-			您的语言： 
-			<?php
-			  echo "${_SERVER['HTTP_ACCEPT_LANGUAGE']}";//使用的语言 
-			  ?> 
-			<br> 
-			浏览器版本： 
-			<?php
-			  echo "${_SERVER['HTTP_USER_AGENT']}";//浏览器版本信息 
-			  ?> 
-			<a href="exit.php">退出登录</a> 
-			<?php
-			} else {//code不存在，调用exit.php 退出登录 
-			  ?> 
-			<script type="text/javascript"> 
-			  alert("退出登录"); 
-			  window.location.href="exit.php"; 
-			</script> 
-			<?php
-			} 
-			?> 
-
-		
-		
+	<body>		
 		<header>
-		  <h1><a href="index.html">e云竹</a></h1>
+		  <h1><a href="index.php">e云竹</a></h1>
 		  <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 		  <p class="header_p1">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 		  <p class="header_p2">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>		  
-		</header>
-		
+		</header>		
 		<div id="nav">
 		  <ul>
-		    <li><a href="index.html">首页</a></li>
-		    <li><a href="error.html">分享</a></li>
-		    <li><a href="#">慢生活</a></li>
+		    <li><a href="index.php">首页</a></li>
+		    <li><a href="share.html">分享</a></li>
+		    <li><a href="life.html">慢生活</a></li>
 		    <li><a href="http://blog.csdn.net/eyunzhu">我的博客</a></li>
 		    <li><a href="http://www.github.com/eyunzhu">我的github</a></li>
 			<li><a href="messageboard.php">留言板</a></li>
@@ -63,24 +24,26 @@
 		  </ul>
 		</div>
 		<br />
-		<div class="login">				
-			<a href="login.html" >登陆</a>
-			<a href="register.html" >注册</a>
-			<span id="loginState" style="float:right ;font-size: 14px;color: white;"></span> <!--页面右侧显示登陆信息-->
-		</div>		
-		<script>
-			//var len=form.user.value.length;  //从form表单中获取登陆信息
-			var len = 0;    
-			if(len==0){
-				document.getElementById("loginState").innerHTML="用户名：未登录"
-				
-			}
-			else{
-				document.getElementById("loginState").innerHTML="用户名："+form.user.value;
-			}
-		</script>	
-		<br /><br />
 		
+		<div class="login">	<!--判断用户是否登陆	-->		
+			<a href="login.html" >登陆</a>
+			<a href="register.php" >注册</a>
+			<?php
+				session_start (); 
+				if (isset ( $_SESSION ["code"] )) {}
+				else {
+					 $_SESSION["username"]="未登录";
+				} 
+			?> 
+			<table  cellspacing="" cellpadding="" style="float: right;font-size: 14px;">
+				<tr>
+					<td>用户名：</td>
+					<th><?php echo "${_SESSION["username"]}" ; ?></th>					
+				</tr>				
+			</table>
+		</div>	
+	
+<br /><br />
 <article>
 	
 	<div class="l_box">
@@ -111,31 +74,18 @@
 			      <ul>
 			        <dl>
 			          <dt class="art"><img src="img/mylove.jpg" alt="专辑"></dt>
-			          <dd class="icon-song"><span></span>我的爱人</dd>
-			          <dd class="icon-artist"><span></span>歌手：苹果</dd>
-			          <dd class="icon-album"><span></span>专辑：《mylove》</dd>
+			          <dd class="icon-song"style="color: #000000;"><span></span>我的爱人</dd>
+			          <dd class="icon-artist" style="color: #000000;"><span></span>歌手：苹果</dd>
+			          <dd class="icon-album" style="color: #000000;"><span></span>专辑：《mylove》</dd>
 			          <dd class="music">
-			            <!--
-							<audio src="images/nf.mp3" controls ></audio> </dd>
-							<embed src="images/nf.mp3" width = "100%" height ="20" hidden="false" loop="true" autostart="true">
-						-->
-						<audio src="img/mylove.mp3" autostart="true" controls></audio> </dd>
-						
-						
-			          <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
-					  
+						<audio src="img/MyLove.mp3" autostart="true" controls></audio> </dd>						
 			        </dl>
 			      </ul>
    			 </div>
 		</div>	
 		
-		
-		
-		
-		
-		
 	</div>
-	
+
 	<div class="r_box">
 		
 			<h2><a href="http://blog.csdn.net/eyunzhu/article/details/71246631">那个夏天</a></h2>
@@ -168,25 +118,14 @@
 	
 	<div class="r_box">
 		
-			<h2><a href=""></a>那个夏天</h2>
-			<div>
-				
-				<p>网名：<a href="http://www.eyunzhu.com">e云竹</a></p>
-				<p>邮箱：eyunzhu@foxmail.com</p>
-		        <p>博客：<a href="http://blog.csdn.net/eyunzhu">blog.csdn.net/eyunzhu</a> </p>
-		        <p>职业：学生</p>
+			<h2><a href="http://blog.csdn.net/eyunzhu/article/details/71304975">演戏</a></h2>
+			<div>				
+				<p>人生就像一场戏</p>
+				<p>我们每个人一生,甚至每一天都会扮演各种不同的角色。</p>
+		        <p>面对各种角色... 而只有人开始动用思想之时,人才从只会生存的自然人过渡</p>
 			</div>
 			
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -197,13 +136,9 @@
 </article>	
 		
 		
-	<footer>
-		Design by 李庆华
-		
-	</footer>	
-		
-		
-		
-		
-		
-+</html>
+<footer>
+	Design by 李庆华
+	
+</footer>	
+</body>
+</html>
