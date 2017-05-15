@@ -2,7 +2,7 @@
 <html> 
 <head> 
   <meta charset="UTF-8"> 
-  <title>登录系统的后台执行过程</title> 
+  <title>登录系统</title> 
 </head> 
 <body> 
   <?php 
@@ -33,11 +33,11 @@
 //  } 
   
     
-    if (is_null($dbusername)) {//用户名在数据库中不存在时跳回index.html界面 
+    if (is_null($dbusername)) {//用户名在数据库中不存在时跳回login.html界面 
   ?> 
   <script type="text/javascript"> 
     alert("用户名不存在"); 
-    window.location.href="index.html"; 
+    window.location.href="login.html"; 
   </script> 
   <?php 
     } 
@@ -55,7 +55,7 @@
         $_SESSION["code"]=mt_rand(0, 100000);//给session附一个随机值，防止用户直接通过调用界面访问welcome.php 
   ?> 
   <script type="text/javascript"> 
-    window.location.href="succeed.html"; 
+    window.location.href="go.html"; 
   </script> 
   <?php 
       } 

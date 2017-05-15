@@ -4,13 +4,11 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<script src="js/js.js"></script>
-		<title>注册</title>
-		
-		
+		<title>注册</title>		
 	</head>
 	<body>
 		<header>
-		  <h1><a href="index.html">e云竹</a></h1>
+		  <h1><a href="index.php">e云竹</a></h1>
 		  <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 		  <p class="header_p1">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
 		  <p class="header_p2">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>		  
@@ -18,9 +16,9 @@
 		
 		<div id="nav">
 		  <ul>
-		    <li><a href="index.html">首页</a></li>
-		    <li><a href="error.html">分享</a></li>
-		    <li><a href="#">慢生活</a></li>
+		    <li><a href="index.php">首页</a></li>
+		    <li><a href="share.html">分享</a></li>
+		    <li><a href="life.html">慢生活</a></li>
 		    <li><a href="http://blog.csdn.net/eyunzhu">我的博客</a></li>
 		    <li><a href="http://www.github.com/eyunzhu">我的github</a></li>
 		    <li><a href="messageboard.php">留言板</a></li>
@@ -30,15 +28,33 @@
 		<br />
 	<article>
 		
+ <?php
+	$conn = mysqli_connect('localhost','root','root','eyunzhu_db')or ('error');
+	
+	if(isset($_POST['submit'])&&$_POST['submit'])
+	{
+		$sql="insert into eyunzhu_user (username,password,email,sex,hobby,age)" .
+		"values ('$_POST[username]','$_POST[password]','$_POST[email]','','','')";	
+		mysqli_query($conn,$sql);
+		
+	?>
+	<script type="text/javascript">
+		var h = getHobby();
+		alert(h);
+		alert("注册成功f！");
+	</script>
+<?php		
+}
+?>
 			
 		
 		<h2 style="text-align: left;margin: 40px;">用户注册</h2>
-
-		<form name="form_register" action="" method="post" onsubmit="return isRegisterSubmit(form_register)" >
-		<style type="text/css">
+<style type="text/css">
 			table{margin: auto;}
 			table tr{text-align: right;font-size: 20px;}
 		</style>
+		<form name="form_register" action="register.php" method="post" onsubmit="return isRegisterSubmit(form_register)" >
+		
 			<table  cellspacing="15px" cellpadding="10">
 				<tr>
 					<td colspan="2" style="text-align: center;">新用户注册</td>
@@ -101,9 +117,10 @@
 					</td>
 				<tr>
 					<td colspan="2" style="text-align: center;"> 
-						<input type="submit" value="注册"/>
+						<input type="submit" name="submit" value="注册"/>
 						<input type="reset" value="重置"   />
 						<input type="button" value="返回" onclick="javascript :history.back(-1);" />
+						<input type="button" id="" value="登陆页面" onclick="window.location.href='login.html'" />
 					</td>					
 				</tr>
 			</table>

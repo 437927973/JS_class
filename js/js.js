@@ -99,7 +99,7 @@
 
 	function register() 	//跳转到注册页面
     { 
-      window.location.href="register.html"; 
+      window.location.href="register.php"; 
     } 
 
     function login(){	//跳转到登陆页面
