@@ -1,7 +1,7 @@
 #jS课程作品
 
 ### 数据库：eyunzhu_DB
-* 用户数据表：eyunzhu_user
+* 用户信息表：eyunzhu_user
 	* userid
 	* username
 	* password
