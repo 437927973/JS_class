@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background:  url(../img/huangye.jpg) no-repeat center top;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				background-size: cover;
+		/*
+		border: 1PX #d1d2da solid;
+		background: url(../img/blurred.jpg) no-repeat center top;
+		background-size: cover;
+		-webkit-background-size: cover;
+				-moz-background-size: cover;
+		font-size:12px;
+		text-align: center; 
+		margin-left: auto; margin-right: auto;
+		
+		*/
+}
+.header{
+	
+		border: 1PX #d1d2da solid;
+		height:250px;width: 800px;		
+		margin-left: auto; margin-right: auto;
+		background:  url(../img/bg.gif)  no-repeat;	
+		background-size: 800px 250px;
+		
+}
+
+.s1{ 
+		border: 1PX #d1d2da solid;
+		 
+		height: 800px;width: 800px;
+		text-align: center; 
+		margin-left: auto; margin-right: auto;
+}
+label{margin: 8px auto;text-align: right;width: 320px;float:left;}
+.int{margin: 5px auto;}
+input.required{float:left; border: #999 1px solid;height:28px;width:200px;required}
+input.required01{float:left; border: #999 1px solid;}
+.sub{ float:left;width: 820px;}
+input.su{font-size: 13px;}
+
+.l_box { width: 290px; float: left }
+
+.about_me img, .about_he img { width: 94px; height: 94px; float: left; clear: left; margin-right: 10px; }
+.about_me p, .about_he p { line-height: 24px; }
+
+.l_box { width: 290px; float: left ;border: #231F20 2px solid;}
+.about_me img{width: 94px; height: 94px; float: left; clear: left; margin-right: 10px;margin: 20px;}
+.about_me p, .about_he p { line-height: 48px; }
+
+
+
+
+
+
+
+/*body {font:12px/19px Arial, Helvetica, sans-serif;text-align: center; color:#666;}
+
+input.required{border:#999 1px solid; height:16px; width:120px;}
+label{text-align:right; width:120px; }
+.sub{margin-left:50px;}
+.int{margin:5px auto;}
+*/
+
+
+
+/*body{font-size: 30px; background-color: #22DDDD}
+
+input.required{border:#999 1px solid; height:28px; width:200px;}
+.int{margin:5px auto;}
+.label{text-align: right;width:200px;float:left;}
+
+
+
+.s1{
+	border: 1px red solid;
+	height: 800px;
+	width: 1400px;
+	
+	border-radius:10px;
+	
+}
+.s2{ 
+	width:500px;
+	text-align: center;
+	background-color:  #40B3DF;
+}
+
+.s3{
+	float:left;
+	height: 200px;
+	width: 200px;
+	background-color: red;
+}
+.s4{
+	float:right;
+	height: 200px;
+	width: 200px;
+	background-color: red;
+}*/

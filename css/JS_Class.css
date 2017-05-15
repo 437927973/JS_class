@@ -1,0 +1,21 @@
+*{margin: 0;padding: 0;}
+
+body {font-size: 12px;color: white;margin: auto; background: url(../img/bgxh.jpg) scroll no-repeat ;background-size: cover;}
+header {border:#C71585 1px solid; width:1000px;margin: auto;margin-top: 20px;margin-bottom: 20px;}
+header h1{text-align: center;}
+/*导航栏*/   /*border: red 1px solid; */
+#nav {border: red 1px solid; width: 1000px; line-height: 40px; height: 40px; margin: auto;margin-top: 15px; font-family: "微软雅黑"; font-size: 16px }
+#nav ul {margin: auto; width: 960px; padding-left: 40px; overflow: hidden; }
+#nav ul li { display: inline-block; width: 100px; float: left; text-align: center; font-weight: bold; }
+#nav ul li a { color: white; }
+
+article {border: white 3px solid ; width: 1200px;margin: auto;margin-top: 20px;overflow: hidden;}
+/*
+ * overflow: hidden;
+ * 在非IE中可以起到清除浮动的功效，
+ */
+
+.l_box{font-size: 16px; margin: 15px 15px 15px 15px; width: 250px;float: left;overflow: hidden;}
+.l_box h2{text-align: center;}
+.l_box div {border: red 1px solid; margin-bottom: 15px; overflow: hidden }
+.r_box{margin: 15px 15px 15px 15px; width: 800px;float: right;overflow: hidden;}

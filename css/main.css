@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0;}
+
+a:link, a:visited { text-decoration: none; color: white;}
+ul, li { list-style-type: none ;}
+img { border: 0; }
+
+body{font-size: 12px; background: url(../img/003.jpg)  scroll no-repeat ;background-size: cover; color: white;}
+header {padding: 30px 0 30px 0; width: 1000px; margin: auto; border: red 1px solid; }
+header h1 { font-size: 36px; background: url(../img/e1.png) no-repeat;background-size: 15%; }/*logo超链接*/
+header h1 a {opacity: 0; }
+header p { margin: 30px 0 0 30px; text-shadow: mediumvioletred 1px 1px 1px; color: #fff; font-size: 18px; }
+.header_p1{padding: 0 0 0 50px;}
+.header_p2{padding: 0 0 0 100px;}
+/*导航栏*/   /*border: red 1px solid; */
+#nav {border: red 1px solid; width: 1000px; line-height: 40px; height: 40px; margin: auto;margin-top: 15px; font-family: "微软雅黑"; font-size: 16px }
+#nav ul {margin: auto; width: 960px; padding-left: 40px; overflow: hidden; }
+#nav ul li { display: inline-block; width: 100px; float: left; text-align: center; font-weight: bold; }
+#nav ul li a { color: white; }
+
+.login{width: 1000px; margin: auto;}
+.login a{ float:left;margin:0 0 0 20px;color: white;font-size: 14px;}
+
+/* content */
+article {border: red 1px solid; width: 1000px; margin: auto; overflow: hidden; }
+/*左部分*/
+.l_box{margin: 15px 15px 15px 15px; width: 250px;float: left;}
+.l_box h2 { border: red 1px solid;font-size: 14px; line-height: 30px; padding-left: 20px;  }
+.l_box div {border: red 1px solid; margin-bottom: 15px; overflow: hidden }
+.l_box div ul { padding: 10px; overflow: hidden; }
+
+.about_me img{ width: 120px; height:120px; margin: auto; clear: left; margin-right: 10px; }
+.about_me p{font-size: 14px; line-height: 24px; }
+
+.r_box{border: red 1px solid; margin: 15px 15px 15px 15px;width: 650px;float: right;}
+.r_box h2{border: red 1px solid;font-size: 14px; line-height: 30px; padding-left: 20px; }
+.r_box div {padding: 10px; overflow: hidden;}
+.r_box p{font-size: 16px;line-height: 24px;}
+
+/* music */
+.viny dl dd { color: #555; line-height: 24px; }
+.art { background:url(../img/vinyl.png) no-repeat left; width: 130px; float: left; background-size: 120px; }
+.viny .art img { width: 90px; height: 90px; margin-left: 11px }
+.viny dd span { width: 12px; height: 24px; margin-right: 7px; float: left; display: block; }
+.icon-song span, .icon-artist span, .icon-album span, .icon-like span { background: url(../img/icons.png) no-repeat }
+.icon-song span { background-position: 0px 6px }
+.icon-artist span { background-position: 0 -17px }
+.icon-album span { background-position: 0 -40px }
+.music audio { width: 100%; margin-top: 10px }
+
+footer{border: red 1px solid; width: 1000px;margin: auto;margin-top: 20px;font-size:20px; text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+

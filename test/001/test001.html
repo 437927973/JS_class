@@ -1,0 +1,80 @@
+
+<html>
+<head>
+	<title>test001</title>
+	<meta charset="UTF-8 ">
+</head>
+
+<body>
+
+<video id="aa" controls width="320" height="240"
+	
+	oncanplaythrough="functionDuration()" 
+	ontimeupdate="functionCurrentTime(this)">
+	<source src="video.mp4" type="video/mp4">
+	<source src="video.ogg" type="video/ogg">
+	您的浏览器不支持 Html5 video 元素。
+	</source></source>
+</video>
+
+<p id="demo1"><p>
+	
+<script>
+var a=document.getElementById("aa");
+function functionDuration() { //函数 持续时长 视频总长
+    document.getElementById("demo1").innerHTML="视频时长："+a.duration+"秒";
+}
+</script>
+
+<p>当前播放位置: <span id="demo2"></span></p>
+<script>
+	function functionCurrentTime(event) {
+   		 //  currentTime 属性返回视频/音频（audio/video）当前播放时间位置
+    	document.getElementById("demo2").innerHTML = event.currentTime+"秒";
+    												//(event.currentTime/60).toFixed(2);
+	}
+</script>
+<!--
+	
+-->
+
+
+
+
+
+
+<!--
+
+<video id="aa" controls oncanplaythrough="myFunction()">
+<source src="video.mp4" type="video/mp4">
+<source src="video.ogg" type="video/ogg">
+您的浏览器不支持 Html5 video 元素。
+</source></source></video>
+<p id="demo"><p>
+<script>
+var a=document.getElementById("aa");
+function myFunction() {
+    document.getElementById("demo").innerHTML="视频时长："+a.duration+"秒";
+}
+</script>
+
+-->
+
+	<!--
+	 <video width="320" height="240" controls="controls" ontimeupdate="myFunction(this)">
+	  	<source src="video.ogg" type="video/ogg">
+	  	<source src="video.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+		<p>当前播放位置: <span id="demo"></span></p>
+<script>
+	function myFunction(event) {
+   		 //  currentTime 属性返回视频/音频（audio/video）当前播放位置
+    	document.getElementById("demo").innerHTML = (event.currentTime/60).toFixed(2);
+	}
+</script>
+
+ -->
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+
+<html>
+<head>
+	<title>test003</title>
+	<meta charset="UTF-8 ">
+    <script src="min.js"></script>
+    <script src="highcharts.js"></script>
+    <script src="exporting.js"></script>
+</head>
+
+<body>
+
+<script>
+    var v="\"video.mp4\"";
+</script> 
+<video id="aa" controls width="320" height="240"
+	
+	oncanplaythrough="functionDuration()" 
+	ontimeupdate="functionCurrentTime(this)">
+	<source src="video.mp4" type="video/mp4">
+	<source src="video.ogg" type="video/ogg">
+	您的浏览器不支持 Html5 video 元素。
+	</source></source>
+</video>
+
+<p id="demo1"><p>
+	
+<script>
+var a=document.getElementById("aa");
+function functionDuration() { //函数 持续时长 视频总长
+    document.getElementById("demo1").innerHTML="视频时长："+a.duration+"秒";
+    
+    //global var ga=a.duration;
+}
+</script>
+
+<p>当前播放位置: <span id="demo2"></span></p>
+<script>
+	function functionCurrentTime(event) {
+   		 //  currentTime 属性返回视频/音频（audio/video）当前播放时间位置
+    	document.getElementById("demo2").innerHTML = event.currentTime+"秒";
+    												//(event.currentTime/60).toFixed(2);
+	}
+</script>
+<br>
+999<p id="demo3">333<p>
+<script>
+document.write("fdsv");
+document.getElementById("demo3").innerHTML="视频时长："+a.duration+"秒";
+    
+</script>
+
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+$(document).ready(function () {
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 20,
+            events: {
+                load: function () {
+
+                    // set up the updating of the chart each second
+                    var series = this.series[0];
+                    setInterval(function () {
+                        var x = (new Date()).getTime(), // current time
+                            y = Math.random();    //后续y值
+                        series.addPoint([x, y], true, true);
+                    }, 1000);
+                }
+            }
+        },
+        title: {
+            text: '表头' //表头名
+        },
+        xAxis: { //横座标
+            type: 'datetime',
+            tickPixelInterval: 150  //横坐标的密度
+        },
+        yAxis: { //纵坐标
+            title: {
+                text: '数值' //列名
+            },
+            plotLines: [{  //标线属性  貌似无用
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: { //提示信息
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'Random data',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),i;
+
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        y: Math.random() //初始y
+                    });
+                }
+                return data;
+            }())
+        }]
+    });
+});
+
+</script>
+
+
+
+</body>
+
+</html>

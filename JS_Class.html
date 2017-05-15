@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/JS_Class.css"/>
+		
+		<script src="js/JS_Class.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/print.js" type="text/javascript" charset="utf-8"></script>
+		<title>JS课程</title>
+	</head>
+<body>
+	<header>
+		<h1>JavaScript课程学习</h1>
+	</header>
+	
+	<div id="nav">
+		  <ul>
+		    <li><a href="index.html">首页</a></li>
+		    <li><a href="error.html">分享</a></li>
+		    <li><a href="#">慢生活</a></li>
+		    <li><a href="http://blog.csdn.net/eyunzhu">我的博客</a></li>
+		    <li><a href="http://www.github.com/eyunzhu">我的github</a></li>
+		    <li><a href="messageboard.php">留言板</a></li>
+			<li><a href="JS_Class.html">JS课程</a></li>
+		  </ul>
+		</div>
+<article>
+	<!--图片-->
+	<img src="img/fj01.jpg" width="1200px" height="120" alt="风景图" center
+		onmouseover="this.src='img/fj02.jpg'" onmouseout="this.src='img/fj03.jpg'"/>
+	
+	
+	<div class="l_box">
+		<div id="">
+			<h2>解方程</h2>
+			<form>
+				<input id ="a" type="textarea" size="2" value="a" onfocus="if(this.value=='a'){this.value=''}" onblur="if(this.value == ''){this.value = 'a'}" /> X<sup>2</sup>+
+				<input id ="b" type="textarea" size="2" value="b" onfocus="if(this.value=='b'){this.value=''}" onblur="if(this.value == ''){this.value = 'b'}"/> X+
+				<input id ="c" type="textarea" size="2" value="c" onfocus="if(this.value=='c'){this.value=''}" onblur="if(this.value == ''){this.value = 'c'}"/> = 0
+				<br><br>
+				<input type="button" value="解" onclick="calculater()"/>
+				<input id="x1" type="text" size="8" value="x1="/>
+				<input id="x2" type="text" size="8" value="x2="/>
+			</form>
+		</div>
+	
+	<div style="height: 200px;">
+		<span id="p"></span>
+		<script type="text/javascript">
+			newsSee();
+		</script>
+		<br />
+		<span id="pp"></span>
+		<script type="text/javascript">
+			newsSees();
+		</script>
+	</div>
+		
+	</div>
+	
+	<div class="r_box">
+		<table border="5">
+		<tr><td><center>时间</center></td> <td><center>星期一</center></td> <td><center>星期二</td> <td><center>星期三</td> <td><center>星期四</td> <td><center>星期五</td> <td><center>星期六</td> <td><center>星期日</td></tr>
+		<tr><td>8:05-9:00</td><td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td><td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td> <td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>"数据库原理及应用<br><center>闫丽<br>1-12周主楼东区402</td> <td>"形势与政策<br><center>张方成<br>5周[01-04节]主楼东区201</td> <td>星期日</td></tr>
+		<tr><td><center>时间</center></td> <td><center>星期一</center></td> <td><center>星期二</td> <td><center>星期三</td> <td><center>星期四</td> <td><center>星期五</td> <td><center>星期六</td> <td><center>星期日</td></tr>
+		<tr><td>8:05-9:00</td><td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td><td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td> <td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>"数据库原理及应用<br><center>闫丽<br>1-12周主楼东区402</td> <td>"形势与政策<br><center>张方成<br>5周[01-04节]主楼东区201</td> <td>星期日</td></tr>
+		<tr><td><center>时间</center></td> <td><center>星期一</center></td> <td><center>星期二</td> <td><center>星期三</td> <td><center>星期四</td> <td><center>星期五</td> <td><center>星期六</td> <td><center>星期日</td></tr>
+		<tr><td>8:05-9:00</td><td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td><td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td> <td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>"数据库原理及应用<br><center>闫丽<br>1-12周主楼东区402</td> <td>"形势与政策<br><center>张方成<br>5周[01-04节]主楼东区201</td> <td>星期日</td></tr>
+		<tr><td><center>时间</center></td> <td><center>星期一</center></td> <td><center>星期二</td> <td><center>星期三</td> <td><center>星期四</td> <td><center>星期五</td> <td><center>星期六</td> <td><center>星期日</td></tr>
+		<tr><td>8:05-9:00</td><td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td><td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>概率论与数理统计<br><center>代冬岩<br>1-14周高职楼106</td> <td>多媒体原理及应用<br><center>高云丽<br>1-11周信息馆402</td> <td>"数据库原理及应用<br><center>闫丽<br>1-12周主楼东区402</td> <td>"形势与政策<br><center>张方成<br>5周[01-04节]主楼东区201</td> <td>星期日</td></tr>
+		
+		</table>
+	</div>	
+	
+</article>		
+</body>
+</html>

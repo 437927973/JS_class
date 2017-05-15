@@ -1,0 +1,62 @@
+<html>
+<head>
+	<title>注册</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/js.js"></script>
+</head>
+
+<body>
+	<div class="header">
+		<img src="img/e.png" width="120" height="40" align="left" />
+	</div>
+
+	<div class="s1">
+		<h2 style="text-align: left;margin: 40px;">用户注册</h2>
+
+		<form name="form_register" action="" method="post" onsubmit="return isRegisterSubmit(form_register)">
+			<div class="int">
+				<label for="user">注册账号：</label>
+				<input type="text" id="user" class="required">
+			</div>	<br/><br/><br/><br/>
+
+			<div class="int">
+				<label for="psw1">登录密码：</label>
+				<input type="password" id="psw1" class="required">
+			</div>	<br/><br/><br/><br/>
+
+			<div class="int">
+				<label for="psw2">确认登录密码：</label>
+				<input type="password" id="psw2" class="required">
+			</div>	<br/><br/><br/><br/>
+
+			<div class="int">
+				<label for="email">邮箱：</label>
+				<input type="text" id="email" class="required">
+			</div>	<br/><br/><br/><br/>
+		
+
+			<label >性别：</label>
+			<div style="float:left; margin:2px 0 0 12px;">
+					男：<input type = "radio" name = "gender" value="男" checked="checked" />
+					女：<input type = "radio" name = "gender" value="女" />
+			</div> <br/><br/><br/><br/>
+
+			<div class="sub">
+					<input type="submit" value="注册"     />
+					<input type="reset" value="重置"   />
+					<input type="button" value="返回" onclick="javascript :history.back(-1);" />
+			</div>
+
+		</form>
+
+	</div>
+</body>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,35 @@
+
+
+
+<script>
+	function imagesSelected(myFiles){
+		for (var i = 0,f;f=myFiles[i];i++) {
+			var imageReader=new FileReader();
+			imageReader.onload=(function(aFile){
+				return function(e){
+					var span = document.createElement('span');
+					span.innerHTML=['<img class="images" src="video.mp4"/>'].join();
+					document.getElementById('thumbs').insertBefore(span,null);
+				};
+			}) (f);
+			imageReader.readAsDataURL(f);
+			
+		}
+	}
+
+
+	function dropIt(e){
+		imagesSelected(e.dataTransfer.files);
+		e.stopPropagation();
+		e.preventDefault();
+	}
+</script>
+
+
+
+<td align="left" height="105" ondragenter="return false" ondragover="return false" ondrop="dropIt(event)">
+<output id="thumbs">sss</output>
+
+</td>
+
+ 

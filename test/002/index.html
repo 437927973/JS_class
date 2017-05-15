@@ -1,0 +1,82 @@
+<script src="min.js"></script>
+<script src="highcharts.js"></script>
+<script src="exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script>
+$(document).ready(function () {
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+
+    Highcharts.chart('container', {
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 20,
+            events: {
+                load: function () {
+
+                    // set up the updating of the chart each second
+                    var series = this.series[0];
+                    setInterval(function () {
+                        var x = (new Date()).getTime(), // current time
+                            y = Math.random();    //后续y值
+                        series.addPoint([x, y], true, true);
+                    }, 1000);
+                }
+            }
+        },
+        title: {
+            text: '表头' //表头名
+        },
+        xAxis: { //横座标
+            type: 'datetime',
+            tickPixelInterval: 150  //横坐标的密度
+        },
+        yAxis: { //纵坐标
+            title: {
+                text: '数值' //列名
+            },
+            plotLines: [{  //标线属性  貌似无用
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: { //提示信息
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'Random data',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),i;
+
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        y: Math.random() //初始y
+                    });
+                }
+                return data;
+            }())
+        }]
+    });
+});
+
+</script>

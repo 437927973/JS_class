@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script src="js/js.js"></script>
+		<title>登陆</title>
+	</head>
+<body>		
+	<header>
+	  <h1><a href="index.html">e云竹</a></h1>
+	  <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
+	  <p class="header_p1">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
+	  <p class="header_p2">趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>		  
+	</header>
+	
+	<div id="nav">
+	  <ul>
+	    <li><a href="index.html">首页</a></li>
+	    <li><a href="error.html">分享</a></li>
+	    <li><a href="#">慢生活</a></li>
+	    <li><a href="http://blog.csdn.net/eyunzhu">我的博客</a></li>
+	    <li><a href="http://www.github.com/eyunzhu">我的github</a></li>
+		<li><a href="messageboard.html">留言板</a></li>
+		<li><a href="JS_Class.html">JS课程</a></li>
+	  </ul>
+	</div>
+	
+	
+<article style="margin-top: 20px;">	
+	<h2 style="text-align: left;margin: 40px;">用户登陆</h2>
+	<!--登陆表单-->
+	<form name="form_login" action="enter.php" method="post" onsubmit="return isLoginSubmit(form_login)" style="text-align: center;" >
+		
+		<table  cellspacing="15" cellpadding="10" style="tr{text-align: right;};margin: auto;">
+			<tr>
+				<td>用户名:</td>
+				<td><input type="text" name="username" id="username" ></td>
+			</tr>
+			<tr>
+				<td>密码:</td>
+				<td><input type="password"name="password" id="password" ></td>
+			</tr>
+		</table>		
+	
+			<input style="margin: 0 5px 0 40px ;font-size: 16px;" type="submit" value="登陆"   />
+			<input style="margin: 0 5px;font-size: 16px;" type="reset" value="重置" />
+			<input style="margin: 0 5px;font-size: 16px;" type="button" value="注册" onclick="register()"/>
+			<input style="margin: 0 5px;font-size: 16px;" type="button" value="返回" onclick="javascript:history.back(-1);"/>
+
+
+	</form>
+	
+
+<br /><br /><br /><br /><br /><br /><br />	
+<br /><br /><br /><br /><br /><br /><br />	
+<br /><br /><br /><br /><br /><br /><br />	
+<br /><br /><br /><br /><br /><br /><br />	
+<br /><br /><br /><br /><br /><br /><br />	
+<br /><br /><br /><br /><br /><br /><br />		
+	
+</article>
+<footer>
+	Design by 李庆华
+	
+</footer>		
+	</body>
+</html>
