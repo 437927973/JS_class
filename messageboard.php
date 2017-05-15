@@ -29,7 +29,7 @@
 		<br />
 		<div class="login">	<!--判断用户是否登陆	-->		
 			<a href="login.html" >登陆</a>
-			<a href="register.html" >注册</a>
+			<a href="register.php" >注册</a>
 			<?php
 				session_start (); 
 				if (isset ( $_SESSION ["code"] )) {}
