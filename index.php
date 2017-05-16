@@ -74,9 +74,9 @@
 			      <ul>
 			        <dl>
 			          <dt class="art"><img src="img/mylove.jpg" alt="专辑"></dt>
-			          <dd class="icon-song"style="color: #000000;"><span></span>我的爱人</dd>
-			          <dd class="icon-artist" style="color: #000000;"><span></span>歌手：苹果</dd>
-			          <dd class="icon-album" style="color: #000000;"><span></span>专辑：《mylove》</dd>
+			          <dd class="icon-song"style="color: #000000;float: left;"><span></span>我的爱人</dd>
+			          <dd class="icon-artist" style="color: #000000;float: left;"><span></span>苹果</dd>
+			          <dd class="icon-album" style="color: #000000;float: left;"><span></span>《mylove》</dd>
 			          <dd class="music">
 						<audio src="img/MyLove.mp3" autostart="true" controls></audio> </dd>						
 			        </dl>
