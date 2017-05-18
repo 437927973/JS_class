@@ -47,27 +47,10 @@
 		
 		<br /><br />
 
-<?php
-	$conn = mysqli_connect('localhost','root','root','eyunzhu_db')or ('error');//新连接方式	
-	
-	if(isset($_POST['submit'])&&$_POST['submit'])
-	{
-		$sql="insert into eyunzhu_message (messageid,username,title,content,time)" .
-		"values ('','$_POST[username]','$_POST[title]','$_POST[content]',now())";	
-		mysqli_query($conn,$sql);
-		
-	?>
-	<script type="text/javascript">
-		alert("留言成功！");
-	</script>
-<?php		
-}
-?>
-	
 
 <article>
 	<h2 style="text-align: left;margin: 40px;">留言板</h2>
-	<form action="messageboard.php" method="post" style="margin-left: 20px;">
+	<form action="sub_mes.php" method="post" style="margin-left: 20px;">
 			<div class="int">
 				<label for="username">用户名：</label>
 				<input type="text" name="username" id="username" placeholder="请输入用户名"><br /><br /><br />			

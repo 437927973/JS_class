@@ -105,3 +105,42 @@
     function login(){	//跳转到登陆页面
     	window.location.href="login.html";
     }
+    
+
+
+
+
+
+
+//标题跳动
+
+var tx = new Array ( 
+"您好呀，欢迎来到e云竹^_^", 
+"知道吗？爱笑的人运气很好哦", 
+"哈哈，现在我也～会闪啦", 
+"看啊，我闪～我闪……", 
+"快快把你的眉眼抛过来呀！嘻嘻……"); 
+//设置好你的页面标题栏中要闪烁的5句文本(具体内容自己据需而定吧你) 
+var txcount=5; 
+//数字"5"对应于上边设定的文本数 
+var i=1; 
+var wo=0; 
+var ud=1; 
+//定义i、wo、ud三者的初值 
+function animatetitle() 
+{ 
+window.document.title=tx[wo].substr(0, i)+"_"; 
+if (ud==0) i--; 
+if (ud==1) i++; 
+if (i==-1) {ud=1;i=0;wo++;wo=wo%txcount;} 
+if (i==tx[wo].length+10) {ud=0;i=tx[wo].length;} 
+// if (window.document.title.length < 20 ) window.document.title=window.document.title+"-"; 
+// if (window.document.title.length == 20 ) window.document.title=window.document.title+"]"; 
+// if (window.document.title.length == 21 ) setTimeout("window.document.title='Animierte Seitentitel '; ",1000); 
+
+parent.window.document.title=tx[wo].substr(0, i)+"_"; 
+setTimeout("animatetitle()",100); //数字"100"指每一字符闪烁速度为100毫秒，其改大(小)就闪的慢(快)，可自行设置数值 
+} 
+//以上几行是对标题栏(title)的function为animatetitle的控制过程 
+animatetitle(); 
+//标题栏(title)中运行animatetitle 

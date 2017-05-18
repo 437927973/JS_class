@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/main.css"/>		
-		<title>e云竹</title>		
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>	
+		<script src="js/js.js" type="text/javascript" charset="utf-8"></script>	
 	</head>
-	<body>		
+	<body onunload="animatetitle()">		
 		<header>
 		  <h1><a href="index.php">e云竹</a></h1>
 		  <p>趁我们都还年轻,多欣赏下沿途的风景，不要错过了流年里温暖的人和物....</p>
@@ -82,8 +82,19 @@
 			        </dl>
 			      </ul>
    			 </div>
-		</div>	
-		
+   			 
+   		<div class="about_me">
+			<h2>江湖路</h2>
+			<video id="aa" controls width="260"	
+				oncanplaythrough="functionDuration()" 
+				ontimeupdate="functionCurrentTime(this)">
+				<source src="file/Jianghu.mp4" type="video/mp4">
+				<source src="file/Jianghu.ogg" type="video/ogg">
+				您的浏览器不支持 Html5 video 元素。
+				</source>		
+		</div>		
+   			 
+		</div>			
 	</div>
 
 	<div class="r_box">

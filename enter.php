@@ -55,7 +55,8 @@
         $_SESSION["code"]=mt_rand(0, 100000);//给session附一个随机值，防止用户直接通过调用界面访问welcome.php 
   ?> 
   <script type="text/javascript"> 
-    window.location.href="go.html"; 
+  	alert("登陆成功！");
+    window.location.href="index.php"; 
   </script> 
   <?php 
       } 

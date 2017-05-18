@@ -28,32 +28,13 @@
 		<br />
 	<article>
 		
- <?php
-	$conn = mysqli_connect('localhost','root','root','eyunzhu_db')or ('error');
-	
-	if(isset($_POST['submit'])&&$_POST['submit'])
-	{
-		$sql="insert into eyunzhu_user (username,password,email,sex,hobby,age)" .
-		"values ('$_POST[username]','$_POST[password]','$_POST[email]','','','')";	
-		mysqli_query($conn,$sql);
-		
-	?>
-	<script type="text/javascript">
-		var h = getHobby();
-		alert(h);
-		alert("注册成功f！");
-	</script>
-<?php		
-}
-?>
-			
 		
 		<h2 style="text-align: left;margin: 40px;">用户注册</h2>
 <style type="text/css">
 			table{margin: auto;}
 			table tr{text-align: right;font-size: 20px;}
 		</style>
-		<form name="form_register" action="register.php" method="post" onsubmit="return isRegisterSubmit(form_register)" >
+		<form name="form_register" action="sub_reg.php" method="post" onsubmit="return isRegisterSubmit(form_register)" >
 		
 			<table  cellspacing="15px" cellpadding="10">
 				<tr>
